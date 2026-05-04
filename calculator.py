@@ -1,5 +1,5 @@
 def add(a, b):
-    return a - b  # Bug: should be a + b
+    return a + b
 
 
 def subtract(a, b):
@@ -11,7 +11,9 @@ def multiply(a, b):
 
 
 def divide(a, b):
-    return a / b  # Bug: no check for division by zero
+    if b == 0:
+        raise ValueError("Cannot divide by zero")
+    return a / b
 
 
 if __name__ == "__main__":
